@@ -1,0 +1,7 @@
+version: '3'
+services:
+  HelloWorldPrinter:
+    build: .
+    image: openjdk:11
+    command: ["java", "HelloWorldPrinter"]
+
