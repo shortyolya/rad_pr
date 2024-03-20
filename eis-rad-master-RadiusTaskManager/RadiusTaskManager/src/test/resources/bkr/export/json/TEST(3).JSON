@@ -1,0 +1,275 @@
+{
+  "groups":[
+    {
+      "id":36,
+      "name":"Коммерческое описание",
+      "values":[
+        {
+          "propertyName":"Заголовок объявления",
+          "propertyCode":"Title",
+          "parentValueCode":"null",
+          "valueCode":"12856",
+          "value":"Заголовок объявления"
+        },
+        {
+          "propertyName":"Текст объявления",
+          "propertyCode":"Text",
+          "parentValueCode":"null",
+          "valueCode":"12857",
+          "value":"Текст объявления"
+        },
+        {
+          "propertyName":"Факторы инвестиционной привлекательности",
+          "propertyCode":"InvestAttract",
+          "parentValueCode":"null",
+          "valueCode":"12858",
+          "value":""
+        },
+        {
+          "propertyName":"Цена за сотку",
+          "propertyCode":"thepricefora100m2",
+          "parentValueCode":"null",
+          "valueCode":"12859"
+        },
+        {
+          "propertyName":"Тип сделки (для Залогов)",
+          "propertyCode":"rent",
+          "parentValueCode":"null",
+          "valueCode":"12860",
+          "value":"Продажа"
+        }
+      ]
+    },
+    {
+      "id":221,
+      "name":"Земельный участок",
+      "values":[
+        {
+          "propertyName":"Площадь ЗУ (м2)",
+          "propertyCode":"LandArea",
+          "parentValueCode":"null",
+          "valueCode":"12861",
+          "value":"255"
+        },
+        {
+          "propertyName":"Категория земли",
+          "propertyCode":"LandCategory",
+          "parentValueCode":"null",
+          "valueCode":"12862",
+          "value":"земли населенных пунктов"
+        },
+        {
+          "propertyName":"Вид разрешенного использования",
+          "propertyCode":"PermittedUseType",
+          "parentValueCode":"null",
+          "valueCode":"12863",
+          "value":"ЛПХ"
+        },
+        {
+          "propertyName":"Вид права на землю",
+          "propertyCode":"LandRightType",
+          "parentValueCode":"null",
+          "valueCode":"12864",
+          "value":"Собственность"
+        },
+        {
+          "propertyName":"Срок договора аренды ЗУ (в случае аренды)",
+          "propertyCode":"LeaseTermLand",
+          "parentValueCode":"null",
+          "valueCode":"12865",
+          "value":""
+        },
+        {
+          "propertyName":"Кадастровый номер (номера) ЗУ",
+          "propertyCode":"CadastralNumberLand",
+          "parentValueCode":"null",
+          "valueCode":"12866",
+          "value":""
+        },
+        {
+          "propertyName":"Ссылка на публичную кадастровую карту (ЗУ)",
+          "propertyCode":"LandCadastralMapLink",
+          "parentValueCode":"null",
+          "valueCode":"12867",
+          "value":""
+        },
+        {
+          "propertyName":"Зонирование по Генплану",
+          "propertyCode":"Thezoningonthemasterplan",
+          "parentValueCode":"null",
+          "valueCode":"12868",
+          "value":""
+        },
+        {
+          "propertyName":"Зонирование по ПЗЗ",
+          "propertyCode":"Zoningforlanduse",
+          "parentValueCode":"null",
+          "valueCode":"12869",
+          "value":""
+        },
+        {
+          "propertyName":"Перспективы застройки и развития территории",
+          "propertyCode":"Perspectiveofbuildinganddevelopment",
+          "parentValueCode":"null",
+          "valueCode":"12870",
+          "value":""
+        }
+      ]
+    },
+    {
+      "id":222,
+      "name":"Расположение",
+      "values":[
+        {
+          "propertyName":"Шоссе",
+          "propertyCode":"highway",
+          "parentValueCode":"null",
+          "valueCode":"12871"
+        },
+        {
+          "propertyName":"Транспортная доступность",
+          "propertyCode":"TransportAccess",
+          "parentValueCode":"null",
+          "valueCode":"12872",
+          "value":"Доступно, в 20 минутах от КАД"
+        },
+        {
+          "propertyName":"Удаленность от МКАД",
+          "propertyCode":"DistanceMKAD",
+          "parentValueCode":"null",
+          "valueCode":"12873",
+          "value":"1200.00"
+        },
+        {
+          "propertyName":"Удаленность от кольцевой автодороги",
+          "propertyCode":"distancefromtheringroad",
+          "parentValueCode":"null",
+          "valueCode":"12874"
+        },
+        {
+          "propertyName":"Удаленность от ближайшего крупного насел.пункта",
+          "propertyCode":"DistanceCity",
+          "parentValueCode":"null",
+          "valueCode":"12875"
+        }
+      ]
+    },
+    {
+      "id":223,
+      "name":"Окружение",
+      "values":[
+        {
+          "propertyName":"Описание расположения ЗУ",
+          "propertyCode":"storagelocationdescription",
+          "parentValueCode":"null",
+          "valueCode":"12876",
+          "value":"На углу возле главной дороги. Последний участок"
+        },
+        {
+          "propertyName":"Локальное окружение",
+          "propertyCode":"LocalEnvironment",
+          "parentValueCode":"null",
+          "valueCode":"12877",
+          "value":"Озеро"
+        },
+        {
+          "propertyName":"Знаковые объекты аналогичного типа использования",
+          "propertyCode":"SignificantObjects",
+          "parentValueCode":"null",
+          "valueCode":"12878",
+          "value":""
+        },
+        {
+          "propertyName":"Знаковые объекты в окружении",
+          "propertyCode":"significantobjectssurrouded",
+          "parentValueCode":"null",
+          "valueCode":"12879",
+          "value":""
+        },
+        {
+          "propertyName":"Наличие социальной инфраструктуры",
+          "propertyCode":"Availabilityofsocialinfrastructure",
+          "parentValueCode":"null",
+          "valueCode":"12880",
+          "value":"Есть"
+        },
+        {
+          "propertyName":"Наличие санитарно-защитной зоны",
+          "propertyCode":"Availabilityofasanitaryprotectionzone",
+          "parentValueCode":"null",
+          "valueCode":"12881",
+          "value":"Да"
+        },
+        {
+          "propertyName":"Наличие в локации зеленых зон и водоемов",
+          "propertyCode":"Availabilityofgreenareasandreservoirsinthelocation",
+          "parentValueCode":"null",
+          "valueCode":"12882",
+          "value":"Да"
+        }
+      ]
+    },
+    {
+      "id":224,
+      "name":"Инженерное обеспечение",
+      "values":[
+        {
+          "propertyName":"Наличие ТУ",
+          "propertyCode":"ThepresenceofTU",
+          "parentValueCode":"null",
+          "valueCode":"12883",
+          "value":"Да"
+        },
+        {
+          "propertyName":"Присоединения к инж. сетям",
+          "propertyCode":"Joininganengnetworks",
+          "parentValueCode":"null",
+          "valueCode":"12884",
+          "value":"Да"
+        },
+        {
+          "propertyName":"Газ",
+          "propertyCode":"Gas",
+          "parentValueCode":"null",
+          "valueCode":"12885",
+          "value":"Да"
+        },
+        {
+          "propertyName":"Водоснабжение",
+          "propertyCode":"Watersupply",
+          "parentValueCode":"null",
+          "valueCode":"12886",
+          "value":"Да"
+        },
+        {
+          "propertyName":"Электроснабжение",
+          "propertyCode":"PowerSupply",
+          "parentValueCode":"null",
+          "valueCode":"12887",
+          "value":"Да"
+        },
+        {
+          "propertyName":"Мощность, кВт",
+          "propertyCode":"Power",
+          "parentValueCode":"null",
+          "valueCode":"12888",
+          "value":"12000"
+        },
+        {
+          "propertyName":"Канализация",
+          "propertyCode":"sewerage",
+          "parentValueCode":"null",
+          "valueCode":"12889",
+          "value":"Да"
+        },
+        {
+          "propertyName":"Наличие примыканий (подъездов) к участку",
+          "propertyCode":"thepresenceofjunctionEntancesTothesite",
+          "parentValueCode":"null",
+          "valueCode":"12890",
+          "value":"Нет"
+        }
+      ]
+    }
+  ]
+}

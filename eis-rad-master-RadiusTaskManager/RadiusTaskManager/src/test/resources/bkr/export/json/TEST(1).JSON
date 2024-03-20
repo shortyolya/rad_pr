@@ -1,0 +1,143 @@
+{
+  "groups": [
+    {
+      "id": 294,
+      "name": "Характеристики автомобиля",
+      "values": [
+        {
+          "propertyName": "Марка",
+          "propertyCode": "Make",
+          "parentValueCode": null,
+          "valueCode": "329194",
+          "value": "Alfa Romeo"
+        },
+        {
+          "propertyName": "Модель",
+          "propertyCode": "Model",
+          "parentValueCode": "329194",
+          "valueCode": "329728",
+          "value": "Brera"
+        },
+        {
+          "propertyName": "Поколение",
+          "propertyCode": "Generation",
+          "parentValueCode": "329728",
+          "valueCode": "332099",
+          "value": "I (2006—2010)"
+        },
+        {
+          "propertyName": "Модификация",
+          "propertyCode": "Modification",
+          "parentValueCode": "332099",
+          "valueCode": "354643",
+          "value": "2.2 MT (185 л.с.)"
+        },
+        {
+          "propertyName": "Тип автомобиля",
+          "propertyCode": "CarType",
+          "parentValueCode": null,
+          "valueCode": "С пробегом",
+          "value": "С пробегом"
+        },
+        {
+          "propertyName": "Год выпуска",
+          "propertyCode": "Year",
+          "parentValueCode": null,
+          "valueCode": null,
+          "value": "2010"
+        },
+        {
+          "propertyName": "Пробег",
+          "propertyCode": "Kilometrage",
+          "parentValueCode": null,
+          "valueCode": null,
+          "value": null
+        },
+        {
+          "propertyName": "Состояние",
+          "propertyCode": "Accident",
+          "parentValueCode": null,
+          "valueCode": "Не битый",
+          "value": "Не битый"
+        },
+        {
+          "propertyName": "VIN-номер (vehicle identification number)",
+          "propertyCode": "VIN",
+          "parentValueCode": null,
+          "valueCode": null,
+          "value": null
+        },
+        {
+          "propertyName": "Тип кузова",
+          "propertyCode": "BodyType",
+          "parentValueCode": null,
+          "valueCode": "331240",
+          "value": "Хетчбэк"
+        },
+        {
+          "propertyName": "Цвет",
+          "propertyCode": "Color",
+          "parentValueCode": null,
+          "valueCode": "Белый",
+          "value": "Белый"
+        },
+        {
+          "propertyName": "Количество дверей",
+          "propertyCode": "Doors",
+          "parentValueCode": null,
+          "valueCode": "331243",
+          "value": "3"
+        },
+        {
+          "propertyName": "Тип двигателя",
+          "propertyCode": "FuelType",
+          "parentValueCode": null,
+          "valueCode": "331247",
+          "value": "Бензин"
+        },
+        {
+          "propertyName": "Объем двигателя",
+          "propertyCode": "EngineSize",
+          "parentValueCode": null,
+          "valueCode": null,
+          "value": "2.2"
+        },
+        {
+          "propertyName": "Мощность двигателя",
+          "propertyCode": "Power",
+          "parentValueCode": null,
+          "valueCode": null,
+          "value": "185"
+        },
+        {
+          "propertyName": "Коробка передач",
+          "propertyCode": "Transmission",
+          "parentValueCode": null,
+          "valueCode": "331254",
+          "value": "Механика"
+        },
+        {
+          "propertyName": "Привод",
+          "propertyCode": "DriveType",
+          "parentValueCode": null,
+          "valueCode": "331251",
+          "value": "Передний"
+        },
+        {
+          "propertyName": "Руль",
+          "propertyCode": "WheelType",
+          "parentValueCode": null,
+          "valueCode": null,
+          "value": null
+        },
+        {
+          "propertyName": "Количество владельцев по ПТС",
+          "propertyCode": "Owners",
+          "parentValueCode": null,
+          "valueCode": null,
+          "value": null
+        }
+      ]
+    }
+  ]
+}

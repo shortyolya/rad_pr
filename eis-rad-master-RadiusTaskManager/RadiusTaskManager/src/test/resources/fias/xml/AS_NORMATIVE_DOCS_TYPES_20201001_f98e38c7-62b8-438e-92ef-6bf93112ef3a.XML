@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NDOCTYPES>
+    <NDOCTYPE ID="0" NAME="Не указан" STARTDATE="1900-01-01" ENDDATE="2016-03-31"/>
+    <NDOCTYPE ID="1" NAME="Закон РФ" STARTDATE="1900-01-01" ENDDATE="2016-03-31"/>
+    <NDOCTYPE ID="2" NAME="Постановление Правительства РФ" STARTDATE="1900-01-01" ENDDATE="2016-03-31"/>
+    <NDOCTYPE ID="3" NAME="Закон субъекта РФ" STARTDATE="1900-01-01" ENDDATE="2016-03-31"/>
+</NDOCTYPES>

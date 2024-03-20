@@ -1,0 +1,24 @@
+{
+  "groups":[
+    {
+      "id":60,
+      "name":"Объявление",
+      "values":[
+        {
+          "propertyName":"Заголовок объявления",
+          "propertyCode":"Title",
+          "parentValueCode":"null",
+          "valueCode":"23904",
+          "value":"Заголовок"
+        },
+        {
+          "propertyName":"Текст объявления",
+          "propertyCode":"Text",
+          "parentValueCode":"null",
+          "valueCode":"23905",
+          "value":"Важный текст о продаже"
+        }
+      ]
+    }
+  ]
+}

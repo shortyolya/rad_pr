@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<APARTMENTTYPES>
+    <APARTMENTTYPE ID="1" NAME="Помещение" SHORTNAME="помещение" DESC="Помещение" STARTDATE="1900-01-01"
+                   ENDDATE="2079-06-06" UPDATEDATE="1900-01-01" ISACTIVE="1"/>
+    <APARTMENTTYPE ID="2" NAME="Квартира" SHORTNAME="кв" DESC="Квартира" STARTDATE="1900-01-01" ENDDATE="2079-06-06"
+                   UPDATEDATE="1900-01-01" ISACTIVE="1"/>
+    <APARTMENTTYPE ID="3" NAME="Офис" SHORTNAME="офис" DESC="Офис" STARTDATE="1900-01-01" ENDDATE="2079-06-06"
+                   UPDATEDATE="1900-01-01" ISACTIVE="1"/>
+    <APARTMENTTYPE ID="4" NAME="Комната" SHORTNAME="комната" DESC="Комната" STARTDATE="1900-01-01" ENDDATE="2079-06-06"
+                   UPDATEDATE="1900-01-01" ISACTIVE="1"/>
+</APARTMENTTYPES>

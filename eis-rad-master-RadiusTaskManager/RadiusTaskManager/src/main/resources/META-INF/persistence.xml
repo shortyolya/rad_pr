@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="radiusPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.Act</class>
+        <class>com.baltinfo.radius.db.model.Account</class>
+        <class>com.baltinfo.radius.db.model.AdStatistics</class>
+        <class>com.baltinfo.radius.db.model.Address</class>
+        <class>com.baltinfo.radius.db.model.AllowObjProp</class>
+        <class>com.baltinfo.radius.db.model.AllowPropVal</class>
+        <class>com.baltinfo.radius.db.model.Application</class>
+        <class>com.baltinfo.radius.db.model.Auction</class>
+        <class>com.baltinfo.radius.db.model.BlockAuction</class>
+        <class>com.baltinfo.radius.db.model.DebitorProperty</class>
+        <class>com.baltinfo.radius.db.model.Declarant</class>
+        <class>com.baltinfo.radius.db.model.DocFile</class>
+        <class>com.baltinfo.radius.db.model.Document</class>
+        <class>com.baltinfo.radius.db.model.DealObject</class>
+        <class>com.baltinfo.radius.db.model.Deal</class>
+        <class>com.baltinfo.radius.db.model.Event</class>
+        <class>com.baltinfo.radius.db.model.ExchangeProc</class>
+        <class>com.baltinfo.radius.db.model.ExchangeProcRun</class>
+        <class>com.baltinfo.radius.db.model.ExplanationResponse</class>
+        <class>com.baltinfo.radius.db.model.LoadAuction</class>
+        <class>com.baltinfo.radius.db.model.LoadAuctionSettings</class>
+        <class>com.baltinfo.radius.db.model.LoadLot</class>
+        <class>com.baltinfo.radius.db.model.LoadFile</class>
+        <class>com.baltinfo.radius.db.model.LoadRs</class>
+        <class>com.baltinfo.radius.db.model.LoadSource</class>
+        <class>com.baltinfo.radius.db.model.LoadSourceSettings</class>
+        <class>com.baltinfo.radius.db.model.LoadStatus</class>
+        <class>com.baltinfo.radius.db.model.LoadJournal</class>
+        <class>com.baltinfo.radius.db.model.Lot</class>
+        <class>com.baltinfo.radius.db.model.MapRegion</class>
+        <class>com.baltinfo.radius.db.model.MarketingEvents</class>
+        <class>com.baltinfo.radius.db.model.MessageEmail</class>
+        <class>com.baltinfo.radius.db.model.Notification</class>
+        <class>com.baltinfo.radius.db.model.ObjCost</class>
+        <class>com.baltinfo.radius.db.model.ObjectJPA</class>
+        <class>com.baltinfo.radius.db.model.ObjRole</class>
+        <class>com.baltinfo.radius.db.model.ObjDescr</class>
+        <class>com.baltinfo.radius.db.model.ObjMarketingEvents</class>
+        <class>com.baltinfo.radius.db.model.ObjProperty</class>
+        <class>com.baltinfo.radius.db.model.OperJournal</class>
+        <class>com.baltinfo.radius.db.model.ParticipantAgent</class>
+        <class>com.baltinfo.radius.db.model.PartyDeal</class>
+        <class>com.baltinfo.radius.db.model.Picture</class>
+        <class>com.baltinfo.radius.db.model.PropertyValue</class>
+        <class>com.baltinfo.radius.db.model.PropertyGroup</class>
+        <class>com.baltinfo.radius.db.model.ReductionSchedule</class>
+        <class>com.baltinfo.radius.db.model.RunningDetails</class>
+        <class>com.baltinfo.radius.db.model.Reward</class>
+        <class>com.baltinfo.radius.db.model.RewardFormula</class>
+        <class>com.baltinfo.radius.db.model.Subject</class>
+        <class>com.baltinfo.radius.db.model.SubjectHistory</class>
+        <class>com.baltinfo.radius.db.model.TypeAuction</class>
+        <class>com.baltinfo.radius.db.model.TypeDeal</class>
+        <class>com.baltinfo.radius.db.model.TypeDoc</class>
+        <class>com.baltinfo.radius.db.model.TypeEvent</class>
+        <class>com.baltinfo.radius.db.model.TypeObject</class>
+        <class>com.baltinfo.radius.db.model.TypeObjDescr</class>
+        <class>com.baltinfo.radius.db.model.VAuctionNotification</class>
+        <class>com.baltinfo.radius.db.model.VRsNotification</class>
+        <class>com.baltinfo.radius.db.model.ClAsv</class>
+        <class>com.baltinfo.radius.db.model.VCianRealEstate</class>
+        <class>com.baltinfo.radius.db.model.CategoryMatcher</class>
+        <class>com.baltinfo.radius.db.model.FeedAd</class>
+        <class>com.baltinfo.radius.db.model.FeedAdObj</class>
+        <class>com.baltinfo.radius.db.model.FeedCategory</class>
+        <class>com.baltinfo.radius.db.model.SaleCategory</class>
+        <class>com.baltinfo.radius.db.model.ObjSaleCategory</class>
+        <class>com.baltinfo.radius.db.model.VAct</class>
+        <class>com.baltinfo.radius.db.model.VAvitoAuto</class>
+        <class>com.baltinfo.radius.db.model.VAvitoRealEstate</class>
+        <class>com.baltinfo.radius.db.model.VAvitoMovable</class>
+        <class>com.baltinfo.radius.db.model.VLoadJournal</class>
+        <class>com.baltinfo.radius.db.model.VFeedObject</class>
+        <class>com.baltinfo.radius.db.model.VBaResults</class>
+        <class>com.baltinfo.radius.db.model.VAsvLot</class>
+        <class>com.baltinfo.radius.db.model.VAsvAuction</class>
+        <class>com.baltinfo.radius.db.model.VAsvApplication</class>
+        <class>com.baltinfo.radius.db.model.DocGenerationType</class>
+        <class>com.baltinfo.radius.db.model.DocParamValue</class>
+        <class>com.baltinfo.radius.db.model.DocTemplate</class>
+        <class>com.baltinfo.radius.db.model.DocTemplateParam</class>
+        <class>com.baltinfo.radius.db.model.DocTemplatePart</class>
+        <class>com.baltinfo.radius.db.model.Document</class>
+        <class>com.baltinfo.radius.db.model.HtmlCorrection</class>
+        <class>com.baltinfo.radius.db.model.TypeDictionary</class>
+        <class>com.baltinfo.radius.db.model.TypeDocTemplateParam</class>
+        <class>com.baltinfo.radius.db.model.FeedCategoryGroup</class>
+        <class>com.baltinfo.radius.db.model.FormatLoad</class>
+        <class>com.baltinfo.radius.db.model.ActFoundation</class>
+        <class>com.baltinfo.radius.db.model.NotifSettings</class>
+        <class>com.baltinfo.radius.db.model.PartAgentRole</class>
+        <class>com.baltinfo.radius.db.model.TypePartAgent</class>
+        <class>com.baltinfo.radius.db.model.Rate</class>
+        <class>com.baltinfo.radius.db.model.VAuctionLot</class>
+        <class>com.baltinfo.radius.db.model.VPaProfile</class>
+        <class>com.baltinfo.radius.db.model.SRO</class>
+        <class>com.baltinfo.radius.db.model.LotonlineProfile</class>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.default_schema" value="web"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="5"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="30"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <!-- Radius DB -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@radius.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="@radius.db.port.number@"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="DP"/>
+            <property name="hibernate.hikari.dataSource.user" value="@radius.db.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@radius.db.pass@"/>
+        </properties>
+    </persistence-unit>
+
+    <!-- Обмен с Банкротством -->
+    <persistence-unit name="bankruptcyPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.bankruptcy.Rubricator</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.VAdditionalDataBkr</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.VApplicationAll</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.VAuctionBkr</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.VAuctionLotAll</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.VDocLinkBkr</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.VNonExecReason</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.VReductionScheduleBkr</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.VWebBidderAll</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.VStepBkr</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="oracle.jdbc.pool.OracleDataSource"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="1521"/>
+            <!-- BKR EXCHANGE DB props -->
+            <property name="hibernate.hikari.dataSource.databaseName" value="@bkr.database.name@"/>
+            <property name="hibernate.hikari.dataSource.serverName" value="@bkr.server.name@"/>
+            <property name="hibernate.hikari.dataSource.driverType" value="thin"/>
+            <property name="hibernate.hikari.dataSource.user" value="@bkr.web.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@bkr.web.pass@"/>
+        </properties>
+    </persistence-unit>
+    <!-- Для обмена торгами с Lot-online.ru, шарда 3 - Аукционы РАД -->
+    <persistence-unit name="lotOnlinePULS3" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.lotonline.Documentlist</class>
+        <class>com.baltinfo.radius.db.model.lotonline.UserDocument</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotInfo</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LoAddress</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Tender</class>
+        <class>com.baltinfo.radius.db.model.lotonline.ParticipationRequest</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Bids</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Offer</class>
+        <class>com.baltinfo.radius.db.model.lotonline.TenderFlow</class>
+        <class>com.baltinfo.radius.db.model.lotonline.CancelReason</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Category</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotReport</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="5432"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="lot_shard3"/>
+            <!-- LO DB lot_shard props -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@lo.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.user" value="@lo.db.lot.shard.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@lo.db.pass@"/>
+        </properties>
+    </persistence-unit>
+
+    <!-- Для обмена с Lot-online.ru, шарда 1 -->
+    <persistence-unit name="lotOnlinePULS1" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.lotonline.Documentlist</class>
+        <class>com.baltinfo.radius.db.model.lotonline.UserDocument</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotInfo</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LoAddress</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Tender</class>
+        <class>com.baltinfo.radius.db.model.lotonline.ParticipationRequest</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Bids</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Offer</class>
+        <class>com.baltinfo.radius.db.model.lotonline.TenderFlow</class>
+        <class>com.baltinfo.radius.db.model.lotonline.CancelReason</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Category</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotReport</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="5432"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="lot_shard1"/>
+            <!-- LO DB lot_shard props -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@lo.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.user" value="@lo.db.lot.shard.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@lo.db.pass@"/>
+        </properties>
+    </persistence-unit>
+    <!-- Для обмена с Lot-online.ru, шарда 2 -->
+    <persistence-unit name="lotOnlinePULS2" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.lotonline.Documentlist</class>
+        <class>com.baltinfo.radius.db.model.lotonline.UserDocument</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotInfo</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LoAddress</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Tender</class>
+        <class>com.baltinfo.radius.db.model.lotonline.ParticipationRequest</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Bids</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Offer</class>
+        <class>com.baltinfo.radius.db.model.lotonline.TenderFlow</class>
+        <class>com.baltinfo.radius.db.model.lotonline.CancelReason</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Category</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotReport</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="5432"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="lot_shard2"/>
+            <!-- LO DB lot_shard props -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@lo.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.user" value="@lo.db.lot.shard.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@lo.db.pass@"/>
+        </properties>
+    </persistence-unit>
+    <!-- Для обмена с Lot-online.ru, шарда 4 -->
+    <persistence-unit name="lotOnlinePULS4" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.lotonline.Documentlist</class>
+        <class>com.baltinfo.radius.db.model.lotonline.UserDocument</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotInfo</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LoAddress</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Tender</class>
+        <class>com.baltinfo.radius.db.model.lotonline.ParticipationRequest</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Bids</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Offer</class>
+        <class>com.baltinfo.radius.db.model.lotonline.TenderFlow</class>
+        <class>com.baltinfo.radius.db.model.lotonline.CancelReason</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Category</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotReport</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="5432"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="lot_shard4"/>
+            <!-- LO DB lot_shard props -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@lo.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.user" value="@lo.db.lot.shard.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@lo.db.pass@"/>
+        </properties>
+    </persistence-unit>
+    <!-- Для обмена с Lot-online.ru, шарда 5 -->
+    <persistence-unit name="lotOnlinePULS5" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.lotonline.Documentlist</class>
+        <class>com.baltinfo.radius.db.model.lotonline.UserDocument</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotInfo</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LoAddress</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Tender</class>
+        <class>com.baltinfo.radius.db.model.lotonline.ParticipationRequest</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Bids</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Offer</class>
+        <class>com.baltinfo.radius.db.model.lotonline.TenderFlow</class>
+        <class>com.baltinfo.radius.db.model.lotonline.CancelReason</class>
+        <class>com.baltinfo.radius.db.model.lotonline.Category</class>
+        <class>com.baltinfo.radius.db.model.lotonline.LotReport</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="5432"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="lot_shard5"/>
+            <!-- LO DB lot_shard props -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@lo.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.user" value="@lo.db.lot.shard.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@lo.db.pass@"/>
+        </properties>
+    </persistence-unit>
+    <!-- Для обмена задатками и торгами  с Lot-online.ru, user_shard1 -->
+    <persistence-unit name="lotOnlineUserShard1PU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.lotonline.UserProfile</class>
+        <class>com.baltinfo.radius.db.model.lotonline.PaymentGuaranty</class>
+        <class>com.baltinfo.radius.db.model.lotonline.PaymentAccount</class>
+        <class>com.baltinfo.radius.db.model.lotonline.PaymentTransaction</class>
+        <class>com.baltinfo.radius.db.model.lotonline.UserAccountDetails</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="5432"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="user_shard1"/>
+            <!--LO DB user_shard props -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@lo.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.user" value="@lo.db.user.shard.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@lo.db.pass@"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="fiasPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.fias.model.Version</class>
+        <class>com.baltinfo.radius.fias.model.AddressObjectType</class>
+        <class>com.baltinfo.radius.fias.model.Apartment</class>
+        <class>com.baltinfo.radius.fias.model.ApartmentType</class>
+        <class>com.baltinfo.radius.fias.model.CarPlace</class>
+        <class>com.baltinfo.radius.fias.model.ChangeHistory</class>
+        <class>com.baltinfo.radius.fias.model.Hierarchy</class>
+        <class>com.baltinfo.radius.fias.model.House</class>
+        <class>com.baltinfo.radius.fias.model.HouseType</class>
+        <class>com.baltinfo.radius.fias.model.MinHierarchy</class>
+        <class>com.baltinfo.radius.fias.model.NdocKind</class>
+        <class>com.baltinfo.radius.fias.model.NdocType</class>
+        <class>com.baltinfo.radius.fias.model.NormDoc</class>
+        <class>com.baltinfo.radius.fias.model.ObjDivision</class>
+        <class>com.baltinfo.radius.fias.model.ObjectGar</class>
+        <class>com.baltinfo.radius.fias.model.ObjectLevel</class>
+        <class>com.baltinfo.radius.fias.model.OperationType</class>
+        <class>com.baltinfo.radius.fias.model.Param</class>
+        <class>com.baltinfo.radius.fias.model.ParamType</class>
+        <class>com.baltinfo.radius.fias.model.Room</class>
+        <class>com.baltinfo.radius.fias.model.RoomType</class>
+        <class>com.baltinfo.radius.fias.model.Stead</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.default_schema" value="fias_gar"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+            <property name="hibernate.jdbc.batch_size" value="1000"/>
+            <property name="hibernate.order_inserts" value="true"/>
+            <property name="hibernate.order_updates" value="true"/>
+            <property name="hibernate.batch_versioned_data" value="true"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="@fias.db.url@" />
+            <property name="javax.persistence.jdbc.user" value="@fias.db.user@" />
+            <property name="javax.persistence.jdbc.password" value="@fias.db.pass@" />
+
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="vitrinaPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+            <property name="hibernate.jdbc.batch_size" value="1000"/>
+            <property name="hibernate.order_inserts" value="true"/>
+            <property name="hibernate.order_updates" value="true"/>
+            <property name="hibernate.batch_versioned_data" value="true"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="5"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="30"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="com.mysql.cj.jdbc.MysqlDataSource"/>
+            <property name="hibernate.hikari.dataSource.serverName" value="@vitrina.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="@vitrina.db.port@"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="cscart"/>
+            <property name="hibernate.hikari.dataSource.user" value="@vitrina.db.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@vitrina.db.pass@"/>
+        </properties>
+    </persistence-unit>
+
+    <!-- БД задатков -->
+    <persistence-unit name="depPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.dep.AccountDeposit</class>
+        <class>com.baltinfo.radius.db.model.dep.AccountOperation</class>
+        <class>com.baltinfo.radius.db.model.dep.BankBook</class>
+        <class>com.baltinfo.radius.db.model.dep.PayDoc</class>
+        <class>com.baltinfo.radius.db.model.dep.TradeAccount</class>
+        <class>com.baltinfo.radius.db.model.dep.TradeBankBook</class>
+        <class>com.baltinfo.radius.db.model.dep.TypeAccountOperation</class>
+        <class>com.baltinfo.radius.db.model.dep.PayDocNotice</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.default_schema" value="dep"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="5"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="5"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <!-- Radius DB -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@radius.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="@radius.db.port.number@"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="DP"/>
+            <property name="hibernate.hikari.dataSource.user" value="@radius.db.dep.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@radius.db.dep.pass@"/>
+        </properties>
+    </persistence-unit>
+    <!-- Обмен задатками с Банкротством -->
+    <persistence-unit name="bkrDepPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.bankruptcy.dep.AccOper</class>
+        <class>com.baltinfo.radius.db.model.bankruptcy.dep.WbAccount</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="oracle.jdbc.pool.OracleDataSource"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="1521"/>
+            <!-- BKR DEP DB props -->
+            <property name="hibernate.hikari.dataSource.databaseName" value="@bkr.database.name@"/>
+            <property name="hibernate.hikari.dataSource.serverName" value="@bkr.server.name@"/>
+            <property name="hibernate.hikari.dataSource.driverType" value="thin"/>
+            <property name="hibernate.hikari.dataSource.user" value="@bkr.dep.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@bkr.dep.pass@"/>
+        </properties>
+    </persistence-unit>
+    <!-- Для обмена торгами с auction-house.ru -->
+    <persistence-unit name="auctionHousePU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.Lots</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <!-- auction-house DB -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@ah.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="5432"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="rad_web"/>
+            <property name="hibernate.hikari.dataSource.user" value="@ah.db.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@ah.db.password@"/>
+        </properties>
+    </persistence-unit>
+    <!-- Для обмена торгами с radholding.ru -->
+    <persistence-unit name="radHoldingPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.baltinfo.radius.db.model.Lots</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.sql.syntax_pgs" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.connection.provider_class"
+                      value="com.baltinfo.radius.utils.HikariConnectionProvider"/>
+            <property name="hibernate.hikari.minimumIdle" value="2"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.idleTimeout" value="5000"/>
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource"/>
+            <!-- radholding.ru DB -->
+            <property name="hibernate.hikari.dataSource.serverName" value="@rad.holding.db.server.name@"/>
+            <property name="hibernate.hikari.dataSource.portNumber" value="@rad.holding.db.server.port@"/>
+            <property name="hibernate.hikari.dataSource.databaseName" value="rad_web"/>
+            <property name="hibernate.hikari.dataSource.user" value="@rad.holding.db.user@"/>
+            <property name="hibernate.hikari.dataSource.password" value="@rad.holding.db.password@"/>
+        </properties>
+    </persistence-unit>
+</persistence>

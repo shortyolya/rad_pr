@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HOUSETYPES>
+    <HOUSETYPE ID="1" NAME="Владение" SHORTNAME="влд." DESC="Владение" STARTDATE="1900-01-01" ENDDATE="2015-11-05"
+               UPDATEDATE="1900-01-01" ISACTIVE="false"/>
+    <HOUSETYPE ID="2" NAME="Дом" SHORTNAME="д." DESC="Дом" STARTDATE="1900-01-01" ENDDATE="2079-06-06"
+               UPDATEDATE="1900-01-01" ISACTIVE="true"/>
+    <HOUSETYPE ID="3" NAME="Домовладение" SHORTNAME="двлд." DESC="Домовладение" STARTDATE="1900-01-01"
+               ENDDATE="2015-11-05" UPDATEDATE="1900-01-01" ISACTIVE="false"/>
+</HOUSETYPES>

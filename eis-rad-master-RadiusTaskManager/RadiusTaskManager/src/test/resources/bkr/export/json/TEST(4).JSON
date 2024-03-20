@@ -1,0 +1,175 @@
+{
+  "groups": [
+    {
+      "id": 291,
+      "name": "Характеристики автомобиля",
+      "values": [
+        {
+          "propertyName": "Марка",
+          "propertyCode": "Make",
+          "parentValueCode": "null",
+          "valueCode": "29684",
+          "value": "Audi"
+        },
+        {
+          "propertyName": "Модель",
+          "propertyCode": "Model",
+          "parentValueCode": "29684",
+          "valueCode": "29685",
+          "value": "80"
+        },
+        {
+          "propertyName": "Поколение",
+          "propertyCode": "Generation",
+          "parentValueCode": "29685",
+          "valueCode": "29686",
+          "value": "B4 (1991—1996)"
+        },
+        {
+          "propertyName": "Модификация",
+          "propertyCode": "Modification",
+          "parentValueCode": "29686",
+          "valueCode": "29687",
+          "value": "1.6 AT (71 л.с.)"
+        },
+        {
+          "propertyName": "Тип автомобиля",
+          "propertyCode": "CarType",
+          "parentValueCode": "null",
+          "valueCode": "29688",
+          "value": "Новые"
+        },
+        {
+          "propertyName": "Год выпуска",
+          "propertyCode": "Year",
+          "parentValueCode": "null",
+          "valueCode": "29689",
+          "value": "1991.00"
+        },
+        {
+          "propertyName": "Пробег",
+          "propertyCode": "Kilometrage",
+          "parentValueCode": "null",
+          "valueCode": "29690",
+          "value": "0.00"
+        },
+        {
+          "propertyName": "Состояние",
+          "propertyCode": "Accident",
+          "parentValueCode": "29685",
+          "valueCode": "29691",
+          "value": "Не битый"
+        },
+        {
+          "propertyName": "VIN-номер (vehicle identification number)",
+          "propertyCode": "VIN",
+          "parentValueCode": "null",
+          "valueCode": "29692",
+          "value": "123"
+        },
+        {
+          "propertyName": "Тип кузова",
+          "propertyCode": "BodyType",
+          "parentValueCode": "null",
+          "valueCode": "29693",
+          "value": "Седан"
+        },
+        {
+          "propertyName": "Количество дверей",
+          "propertyCode": "Doors",
+          "parentValueCode": "null",
+          "valueCode": "29694",
+          "value": "4"
+        },
+        {
+          "propertyName": "Цвет",
+          "propertyCode": "Color",
+          "parentValueCode": "null",
+          "valueCode": "29695",
+          "value": "Пурпурный"
+        },
+        {
+          "propertyName": "Тип двигателя",
+          "propertyCode": "FuelType",
+          "parentValueCode": "null",
+          "valueCode": "29696",
+          "value": "Бензин"
+        },
+        {
+          "propertyName": "Объем двигателя",
+          "propertyCode": "EngineSize",
+          "parentValueCode": "null",
+          "valueCode": "29697",
+          "value": "1.6"
+        },
+        {
+          "propertyName": "Мощность двигателя",
+          "propertyCode": "Power",
+          "parentValueCode": "null",
+          "valueCode": "29698",
+          "value": "71"
+        },
+        {
+          "propertyName": "Коробка передач",
+          "propertyCode": "Transmission",
+          "parentValueCode": "null",
+          "valueCode": "29699",
+          "value": "Автомат"
+        },
+        {
+          "propertyName": "Привод",
+          "propertyCode": "DriveType",
+          "parentValueCode": "null",
+          "valueCode": "29700",
+          "value": "Передний"
+        },
+        {
+          "propertyName": "Руль",
+          "propertyCode": "WheelType",
+          "parentValueCode": "null",
+          "valueCode": "29701",
+          "value": "Левый"
+        },
+        {
+          "propertyName": "Количество владельцев по ПТС",
+          "propertyCode": "Owners",
+          "parentValueCode": "null",
+          "valueCode": "29702",
+          "value": "1.00"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Объявление",
+      "values": [
+        {
+          "propertyName": "Арендопригодная площадь здания (GLA)",
+          "propertyCode": "GrosLeasebleArea",
+          "parentValueCode": "null",
+          "valueCode": "29658"
+        },
+        {
+          "propertyName": "Модель",
+          "propertyCode": "model1",
+          "parentValueCode": "29658",
+          "valueCode": "29659"
+        },
+        {
+          "propertyName": "Поколение",
+          "propertyCode": "generation1",
+          "parentValueCode": "29659",
+          "valueCode": "29682",
+          "value": "8X рестайлинг (2014—2018)"
+        },
+        {
+          "propertyName": "Модификация",
+          "propertyCode": "Modification1",
+          "parentValueCode": "29682",
+          "valueCode": "29683",
+          "value": "1.2 TFSI MT (86 л.с.)"
+        }
+      ]
+    }
+  ]
+}

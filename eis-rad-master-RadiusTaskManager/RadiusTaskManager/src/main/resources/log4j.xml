@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd.MM.yyyy HH:mm:ss,SSS} %5p %c{1} - %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="logging_app" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <param name="MaxBackupIndex" value="30"/>
+        <param name="File" value="${radiustaskmanager.home}/logs/main/radius_task_manager.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd.MM.yyyy HH:mm:ss,SSS} %5p %c{1} - %m%n"/>
+        </layout>
+    </appender>
+
+    <category name="baltinfo.radius_task_manager" additivity="true">
+        <priority value="info"/>
+    </category>
+    <logger name="org.docx4j" additivity="false">
+        <level value="WARN"/>
+        <appender-ref ref="logging_app"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <root>
+        <priority value="info"/>
+        <level value="INFO"/>
+        <appender-ref ref="logging_app"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</log4j:configuration>

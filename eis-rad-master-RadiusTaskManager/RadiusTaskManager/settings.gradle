@@ -1,0 +1,4 @@
+rootProject.name = 'RadiusTaskManager'
+//include ':BaltinfoCommon'
+//project(':BaltinfoCommon').projectDir = new File(settingsDir, '../BaltinfoCommon')
+

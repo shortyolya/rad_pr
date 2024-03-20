@@ -3,7 +3,7 @@ public class HelloWorldPrinter {
         while (true) {
             System.out.println("hello world");
             try {
-                Thread.sleep(100); 
+                Thread.sleep(1); 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

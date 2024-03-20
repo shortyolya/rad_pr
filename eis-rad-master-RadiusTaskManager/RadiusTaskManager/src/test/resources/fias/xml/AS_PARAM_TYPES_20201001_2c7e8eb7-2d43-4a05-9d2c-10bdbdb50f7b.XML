@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PARAMTYPES>
+    <PARAMTYPE ID="3" NAME="ИНН ФЛ ТЕР УЧ" DESC="Территориальный участок ИФНС ЮЛ" CODE="territorialifnsflcode"
+               STARTDATE="2011-11-01" ENDDATE="2079-06-06" UPDATEDATE="2018-06-15" ISACTIVE="true"/>
+    <PARAMTYPE ID="1" NAME="ИФНС ФЛ" DESC="ИФНС ФЛ" CODE="IFNSFL" STARTDATE="2011-11-01" ENDDATE="2079-06-06"
+               UPDATEDATE="2018-06-15" ISACTIVE="true"/>
+    <PARAMTYPE ID="2" NAME="ИФНС ЮЛ" DESC="ИФНС ЮЛ" CODE="IFNSUL" STARTDATE="2011-11-01" ENDDATE="2079-06-06"
+               UPDATEDATE="2018-06-15" ISACTIVE="true"/>
+</PARAMTYPES>

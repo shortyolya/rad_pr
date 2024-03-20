@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADDRESSOBJECTTYPES>
+    <ADDRESSOBJECTTYPE ID="5" LEVEL="1" NAME="Автономная область" SHORTNAME="Аобл" DESC="Автономная область"
+                       STARTDATE="1900-01-01" ENDDATE="2015-11-05" UPDATEDATE="1900-01-01" ISACTIVE="true"/>
+    <ADDRESSOBJECTTYPE ID="2" LEVEL="1" NAME="Автономная область" SHORTNAME="а.обл." DESC="Автономная область"
+                       STARTDATE="2015-11-05" ENDDATE="2079-06-06" UPDATEDATE="2015-11-05" ISACTIVE="true"/>
+    <ADDRESSOBJECTTYPE ID="4" LEVEL="1" NAME="Автономный округ" SHORTNAME="АО" DESC="Автономный округ"
+                       STARTDATE="1900-01-01" ENDDATE="2015-11-05" UPDATEDATE="1900-01-01" ISACTIVE="true"/>
+    <ADDRESSOBJECTTYPE ID="3" LEVEL="1" NAME="Автономный округ" SHORTNAME="а.окр." DESC="Автономный округ"
+                       STARTDATE="2015-11-05" ENDDATE="2079-06-06" UPDATEDATE="2015-11-05" ISACTIVE="true"/>
+</ADDRESSOBJECTTYPES>

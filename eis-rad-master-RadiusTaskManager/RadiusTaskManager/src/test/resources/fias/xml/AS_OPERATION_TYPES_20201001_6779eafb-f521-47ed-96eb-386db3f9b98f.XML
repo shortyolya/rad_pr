@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OPERATIONTYPES>
+    <OPERATIONTYPE ID="0" NAME="Не определено" STARTDATE="1900-01-01" ENDDATE="2079-06-06" UPDATEDATE="1900-01-01"
+                   ISACTIVE="true"/>
+    <OPERATIONTYPE ID="1" NAME="Инициация" STARTDATE="1900-01-01" ENDDATE="2079-06-06" UPDATEDATE="1900-01-01"
+                   ISACTIVE="true"/>
+    <OPERATIONTYPE ID="10" NAME="Добавление" STARTDATE="1900-01-01" ENDDATE="2079-06-06" UPDATEDATE="1900-01-01"
+                   ISACTIVE="true"/>
+    <OPERATIONTYPE ID="20" NAME="Изменение" STARTDATE="1900-01-01" ENDDATE="2079-06-06" UPDATEDATE="1900-01-01"
+                   ISACTIVE="true"/>
+</OPERATIONTYPES>
