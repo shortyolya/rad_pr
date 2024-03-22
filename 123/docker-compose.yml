@@ -1,0 +1,6 @@
+version: '3'
+services:
+  JavaVersion:
+    build: /home/rad_pr/123
+    image: openjdk
+    command: ["java", "JavaVersion"]

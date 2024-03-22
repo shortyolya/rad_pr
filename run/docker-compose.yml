@@ -2,6 +2,7 @@ version: '3'
 services:
   HelloWorldPrinter:
     build: .
-    image: openjdk:11
+    image: openjdk
     command: ["java", "HelloWorldPrinter"]
+    #command: ["sleep", "3600"]
 
