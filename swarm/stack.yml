@@ -1,0 +1,27 @@
+version: "3"
+
+services: 
+  wordpress:
+    image: wordpress 
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_NAME: dima
+      WORDPRESS_DB_USER: dima
+      WORDPRESS_DB_PASSWORD: dima1234
+
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_USER: dima
+      MYSQL_PASSWORD: dima1234
+      MYSQL_DATABASE: dima
+      MYSQL_ROOT_PASSWORD: root
+
+  phomyadmin:
+    image: phpmyadmin 
+    ports:
+      - 8081:80
+    environment:
+      PMA_HOST: mysql
