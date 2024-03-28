@@ -163,6 +163,11 @@ public class ControllerConfiguration {
     }
 
     @Bean
+    SafetyReceiptController safetyReceiptController() {
+        return new SafetyReceiptController();
+    }
+
+    @Bean
     SubjectUtils subjectUtils(SubjectController subjectController) {
         return new SubjectUtils(subjectController);
     }

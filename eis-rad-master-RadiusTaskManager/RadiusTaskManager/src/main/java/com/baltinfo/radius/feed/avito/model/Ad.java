@@ -73,6 +73,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
         "roomType",
         "bathroomMulti",
         "landStatus",
+        "saleOptions",
         "buildingType",
         "renovation",
         "parkingType",
@@ -142,6 +143,8 @@ public class Ad {
     @XmlElement(name = "LandArea")
     @XmlJavaTypeAdapter(type = Double.class, value = DoubleExponentAdapter.class)
     protected Double landArea;
+    @XmlElement(name = "SaleOptions")
+    protected String saleOptions;
     @XmlElement(name = "ObjectSubtype")
     protected String objectSubtype;
     @XmlElement(name = "Secured")
@@ -431,6 +434,14 @@ public class Ad {
 
     public void setLandArea(Double landArea) {
         this.landArea = landArea;
+    }
+
+    public String getSaleOptions() {
+        return saleOptions;
+    }
+
+    public void setSaleOptions(String saleOptions) {
+        this.saleOptions = saleOptions;
     }
 
     public String getObjectSubtype() {

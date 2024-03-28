@@ -122,6 +122,8 @@ import com.baltinfo.radius.notification.impl.LotPublishedNotificationService;
 import com.baltinfo.radius.notification.impl.ManagerNotificationService;
 import com.baltinfo.radius.radapi.client.RadApiClient;
 import com.baltinfo.radius.radapi.security.TokenService;
+import com.baltinfo.radius.safetyReceipt.SequenceResetJob;
+import com.baltinfo.radius.safetyReceipt.SequenceResetService;
 import com.baltinfo.radius.template.TemplateHelper;
 import com.baltinfo.radius.utils.EisFileService;
 import com.baltinfo.radius.vitrina.UpdateVitrinaUrlJob;
@@ -508,8 +510,11 @@ public class JobConfiguration {
     }
 
     @Bean
-    ExportCodesFromLOToRadService exportCodesFromLOToRadService(AuctionController auctionController, ExportCodesFromLOController exportCodesFromLOController, ExchangeProcController exchangeProcController, LotController lotController) {
-        return new ExportCodesFromLOToRadService(auctionController, exportCodesFromLOController, exchangeProcController, lotController);
+    ExportCodesFromLOToRadService exportCodesFromLOToRadService(AuctionController auctionController,
+                                                                ExportCodesFromLOController exportCodesFromLOController,
+                                                                ExchangeProcController exchangeProcController,
+                                                                LotController lotController,  RadApiClient radApiClient, TokenService tokenService) {
+        return new ExportCodesFromLOToRadService(auctionController, exportCodesFromLOController, exchangeProcController, lotController, radApiClient, tokenService);
     }
 
     @Bean
@@ -895,5 +900,15 @@ public class JobConfiguration {
     @Bean
     CheckLinksJob checkLinksJob(CheckLinksService checkLinksService) {
         return new CheckLinksJob(checkLinksService);
+    }
+
+    @Bean
+    SequenceResetService sequenceResetService(SafetyReceiptController safetyReceiptController) {
+        return new SequenceResetService(safetyReceiptController);
+    }
+
+    @Bean
+    SequenceResetJob sequenceResetJob(SequenceResetService sequenceResetService) {
+        return new SequenceResetJob(sequenceResetService);
     }
 }

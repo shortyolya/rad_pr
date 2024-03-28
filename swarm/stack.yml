@@ -18,6 +18,8 @@ services:
       MYSQL_PASSWORD: dima1234
       MYSQL_DATABASE: dima
       MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - /home/dima-vyrtosu/rad_pr/run:/home/dima-vyrtosu/rad_pr/swarm
 
   phomyadmin:
     image: phpmyadmin 

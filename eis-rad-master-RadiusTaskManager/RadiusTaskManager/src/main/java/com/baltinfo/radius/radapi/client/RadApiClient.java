@@ -123,6 +123,18 @@ public class RadApiClient {
         return Result.ok();
     }
 
+    public Result<Void, String> updateLotVitrinaNfaLO(Long lotId, String token) {
+        Result<StringDto, String> response = this.post("/lot-exchange/update-lot",
+                lotId,
+                token,
+                new TypeReference<StringDto>() {
+                });
+        if (response.isError()) {
+            return Result.error("Не удалось передать идентификатор лота для обновления на витрине НФА. Текст ошибки: " + response.getError());
+        }
+        return Result.ok();
+    }
+
     private <T> Result<T, String> post(String path, Object body, String token, TypeReference<T> type) {
         String uri = this.baseUrl + path;
         HttpPost httpPost = new HttpPost(uri);

@@ -1,19 +1,15 @@
 package com.baltinfo.radius.lotonline.codes;
 
-import com.baltinfo.radius.db.constants.ExchangeProcStatus;
-import com.baltinfo.radius.db.constants.ExchangeProcs;
-import com.baltinfo.radius.db.constants.Marketplaces;
-import com.baltinfo.radius.db.constants.RunningDetailsStatus;
+import com.baltinfo.radius.db.constants.*;
 import com.baltinfo.radius.db.controller.AuctionController;
 import com.baltinfo.radius.db.controller.ExchangeProcController;
 import com.baltinfo.radius.db.controller.ExportCodesFromLOController;
 import com.baltinfo.radius.db.controller.LotController;
-import com.baltinfo.radius.db.model.Auction;
-import com.baltinfo.radius.db.model.ExchangeProcRun;
-import com.baltinfo.radius.db.model.Lot;
-import com.baltinfo.radius.db.model.RunningDetails;
+import com.baltinfo.radius.db.model.*;
 import com.baltinfo.radius.db.model.lotonline.LotInfo;
 import com.baltinfo.radius.db.model.lotonline.Tender;
+import com.baltinfo.radius.radapi.client.RadApiClient;
+import com.baltinfo.radius.radapi.security.TokenService;
 import com.baltinfo.radius.utils.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,14 +32,19 @@ public class ExportCodesFromLOToRadService {
     private final ExportCodesFromLOController exportCodesFromLOController;
     private final ExchangeProcController exchangeProcController;
     private final LotController lotController;
+    private final RadApiClient radApiClient;
+    private final TokenService tokenService;
 
     private final String CANT_FIND_LOT_ON_LO = "Не удалось найти лот на ЭТП lot-online";
 
-    public ExportCodesFromLOToRadService(AuctionController auctionController, ExportCodesFromLOController exportCodesFromLOController, ExchangeProcController exchangeProcController, LotController lotController) {
+    public ExportCodesFromLOToRadService(AuctionController auctionController, ExportCodesFromLOController exportCodesFromLOController,
+                                         ExchangeProcController exchangeProcController, LotController lotController,  RadApiClient radApiClient, TokenService tokenService) {
         this.auctionController = Objects.requireNonNull(auctionController, "Can't load auction controller");
         this.exportCodesFromLOController = Objects.requireNonNull(exportCodesFromLOController, "Can't load exportCodesFromLO controller!");
         this.exchangeProcController = Objects.requireNonNull(exchangeProcController, "Can't load exchangeProc controller");
         this.lotController = Objects.requireNonNull(lotController, "Can't load lot controller");
+        this.radApiClient = Objects.requireNonNull(radApiClient, "Can't load radApiClient");
+        this.tokenService = Objects.requireNonNull(tokenService, "Can't load tokenService");
     }
 
     public void runProcedure() {
@@ -58,6 +59,7 @@ public class ExportCodesFromLOToRadService {
                     List<Lot> radLotList = lotController.findLotsByAuctionUnid(epr.getEprSourceId());
                     List<LotInfo> loLotList = exportCodesFromLOController.getLOLotsByTenderId(epr.getEprReceiverId());
                     List<RunningDetails> runningDetailsList = makeListRunningDetails(radLotList, loLotList);
+                    Result<String, String> tokenResult = tokenService.getOpenPartToken();
 
                     for (RunningDetails rd : runningDetailsList) {
                         rd.setEprUnid(epr.getEprUnid());
@@ -85,6 +87,10 @@ public class ExportCodesFromLOToRadService {
                             }
                         } else {
                             updateRunningDetailError(rd, CANT_FIND_LOT_ON_LO);
+                        }
+                        if (isNfaLot(radLot) && tokenResult.isSuccess()) {
+                            logger.info("call updateLotVitrinaNfa for lotUnid = {}", loLot.getId());
+                            radApiClient.updateLotVitrinaNfaLO(loLot.getId(), tokenResult.getResult());
                         }
                     }
 
@@ -131,6 +137,40 @@ public class ExportCodesFromLOToRadService {
             runningDetailsList.add(runningDetails);
         }
         return runningDetailsList;
+    }
+
+    private boolean isNfaLot(Lot lot) {
+        return departmentNfa(lot) && categoryAsvNfa(lot) && categoryDpNfa(lot);
+    }
+
+    public Boolean departmentNfa(Lot lot) {
+        ObjRole orSale = lotController.getObjRoleSale(lot.getObjUnid().getObjUnid());
+        if (orSale != null) {
+            return orSale.getTpaUnid().equals(TypePartAgentConstant.SALE_DEPARTMENT_SPB.getTpaUnid())
+                    || orSale.getTpaUnid().equals(TypePartAgentConstant.SALE_DEPARTMENT_MSC.getTpaUnid());
+        }
+        return false;
+    }
+
+    public Boolean categoryAsvNfa(Lot lot) {
+        ClAsv clAsv = lotController.getClAsvByUnid(lot.getCaUnid());
+        if (clAsv != null && clAsv.getCaCode() != null) {
+            return clAsv.getCaCode().equals(ClAsvCodeConstant.CAR_LOAN.getCode()) || clAsv.getCaCode().equals(ClAsvCodeConstant.MORTGAGE_LOANS.getCode())
+                    || clAsv.getCaCode().equals(ClAsvCodeConstant.OVERDRAFT.getCode()) || clAsv.getCaCode().equals(ClAsvCodeConstant.RIGHT_CLAIM_INDIVIDUAL.getCode())
+                    || clAsv.getCaCode().equals(ClAsvCodeConstant.RIGHT_CLAIM_LEGAL.getCode()) || clAsv.getCaCode().equals(ClAsvCodeConstant.RIGHT_CLAIM_OTHER.getCode())
+                    || clAsv.getCaCode().equals(ClAsvCodeConstant.OTHER_LOANS.getCode());
+        }
+        return false;
+    }
+
+    public Boolean categoryDpNfa(Lot lot) {
+        ObjSaleCategory objSaleCategory = lotController.getObjSaleCategoryByObjUnid(lot.getObjUnid().getObjUnid());
+        if (objSaleCategory != null) {
+            String scCode = objSaleCategory.getScUnid().getScCode().trim();
+            return scCode.equals(SaleCategoryCodeConstant.RIGHT_CLAIM_LEGAL_LOAN.getCode()) || scCode.equals(SaleCategoryCodeConstant.RIGHT_CLAIM_LEGAL.getCode())
+                    || scCode.equals(SaleCategoryCodeConstant.RIGHT_CLAIM_INDIVIDUAL.getCode()) || scCode.equals(SaleCategoryCodeConstant.RIGHT_CLAIM_PERSON.getCode());
+        }
+        return false;
     }
 
     private void updateRunningDetailError(RunningDetails runningDetails, String error) {

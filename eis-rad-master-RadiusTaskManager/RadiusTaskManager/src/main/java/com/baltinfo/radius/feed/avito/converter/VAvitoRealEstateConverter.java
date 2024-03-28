@@ -15,8 +15,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.baltinfo.radius.db.constants.SaleCategoryConstant.*;
-
 /**
  * @author Suvorina Aleksandra
  * @since 23.09.2020
@@ -26,8 +24,7 @@ public abstract class VAvitoRealEstateConverter {
     private static final String PICTURE_COUNT_ERROR = "Отсутствуют фотографии для выгрузки";
     private static final String TS_UNID_ERROR = "Объект в данном статусе не выгружается на доску";
     private static final String MOBILEPHONE_REGEX = "(?:\\+|\\d)[\\d\\-\\(\\) ]{9,}\\d";
-    private final FeedDescriptionService feedDescriptionService;
-
+    private static final String SALE_OPTIONS_DEFAULT = "Аукцион";
     private static final List<Long> errorTsUnidList = new ArrayList<>(Arrays.asList(
             TypeStateConstant.OBJ_SALED.getId(),
             TypeStateConstant.ARCHIVE.getId(),
@@ -35,7 +32,6 @@ public abstract class VAvitoRealEstateConverter {
             TypeStateConstant.TRADE_CANCELED.getId(),
             TypeStateConstant.SOLD_WAITING_FOR_CONTRACT.getId(),
             TypeStateConstant.REFUSAL_OF_DKP.getId()));
-
     private static final List<Long> scUnidsWithoutFloor = new ArrayList<>(Arrays.asList(
             SaleCategoryConstant.OFFICE_BUILDINGS.getCode(),
             SaleCategoryConstant.TRADE_BUILDINGS.getCode(),
@@ -44,10 +40,10 @@ public abstract class VAvitoRealEstateConverter {
             SaleCategoryConstant.CONSTRUCTIONS_IN_PROGRESS.getCode(),
             SaleCategoryConstant.CATERING_FACILITIES.getCode(),
             SaleCategoryConstant.MANSIONS.getCode()));
-
     private static final List<Pair<VAvitoRealEstateParams, Boolean>> rentParams = new ArrayList<Pair<VAvitoRealEstateParams, Boolean>>() {{
         add(new Pair(VAvitoRealEstateParams.LEASE_COMMISSION_SIZE, true));
     }};
+    private final FeedDescriptionService feedDescriptionService;
 
     protected VAvitoRealEstateConverter(FeedDescriptionService feedDescriptionService) {
         this.feedDescriptionService = feedDescriptionService;
@@ -56,6 +52,7 @@ public abstract class VAvitoRealEstateConverter {
     protected Ad fillGeneralProperties(VAvitoRealEstate realEstateFromDB) {
         Ad ad = new Ad();
         ad.setPropertyRights("Посредник");
+        ad.setSaleOptions(SALE_OPTIONS_DEFAULT);
         ad.setPrice(realEstateFromDB.getPrice());
         ad.setDescription(feedDescriptionService.formDescription(realEstateFromDB));
         ad.setId(realEstateFromDB.getObjCode());
@@ -74,7 +71,6 @@ public abstract class VAvitoRealEstateConverter {
     protected Result<List<Pair<String, Boolean>>, List<Pair<String, Boolean>>> adValidCheck(VAvitoRealEstate realEstate,
                                                                                             List<Pair<VAvitoRealEstateParams, Boolean>> params) {
         List<Pair<String, Boolean>> errorList = new ArrayList<>();
-        List<SaleCategoryConstant> verifiedSC;
         boolean isFatalError = false;
         for (Pair<VAvitoRealEstateParams, Boolean> param : params) {
             switch (param.getKey()) {
